@@ -4,9 +4,13 @@
 
 批量处理实验素材：给个人资料页换头像 👉🏻❤️
 
+![](https://user-images.githubusercontent.com/11988080/128552218-8f790042-009b-4a43-a0bd-6952dffb6618.png)
+
 所需环境：[JRE8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 
-在 *release* 中下载 *app.jar* 到图片目录下
+在 *release* 中下载 *app.jar*
+
+将 *app.jar* 移至图片目录下
 
 假设当前目录的结构如下
 
