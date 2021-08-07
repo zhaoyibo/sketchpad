@@ -57,11 +57,11 @@ java -cp app.jar "com.haoyizebo.OverlayImage" \
   
 # 单个：按 背景图片＋贴图图片 单个操作
 java -cp app.jar "com.haoyizebo.OverlayImage" \
-  --background /Users/yibo/Downloads/pics/background/female.bmp \
-  --image /Users/yibo/Downloads/pics/avatar/chinese/0002_real.bmp \
-  --out /Users/yibo/Downloads/pics/out \
-  --location 310,52 \
-  --size 90,90
+  -b /Users/yibo/Downloads/pics/background/female.bmp \
+  -i /Users/yibo/Downloads/pics/avatar/chinese/0002_real.bmp \
+  -o /Users/yibo/Downloads/pics/out \
+  -l 310,52 \
+  -s 90,90
 ```
 
 运行完毕后，即可在指定的 *out* 目录下看到处理好的图片
