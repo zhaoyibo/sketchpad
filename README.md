@@ -5,6 +5,7 @@
 **功能**：在一张图片上覆盖另一张图片
 
 **场景**：批量处理实验素材——给个人资料页换头像 👉🏻❤️
+![](https://user-images.githubusercontent.com/11988080/128552218-8f790042-009b-4a43-a0bd-6952dffb6618.png)
 
 **所需环境**：[JRE8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 
