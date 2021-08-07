@@ -11,11 +11,12 @@
 
 **使用说明**：
 
-下载 [app.jar](https://github.com/zhaoyibo/sketchpad/raw/main/release/app.jar) 到任意目录下（例如 /tmp）
+下载 [app.jar](https://github.com/zhaoyibo/sketchpad/raw/main/release/app.jar) 到任意目录下
 
 使用命令行进入该目录下
 
 ```shell
+# 假设 app.jar 在 /tmp 目录下
 cd /tmp
 ```
 
