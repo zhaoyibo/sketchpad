@@ -11,7 +11,7 @@
 
 **使用说明**：
 
-下载 [app.jar](https://github.com/zhaoyibo/sketchpad/blob/main/release/app.jar) 到任意目录下（例如 /tmp）
+下载 [app.jar](https://github.com/zhaoyibo/sketchpad/raw/main/release/app.jar) 到任意目录下（例如 /tmp）
 
 使用命令行进入该目录下
 
