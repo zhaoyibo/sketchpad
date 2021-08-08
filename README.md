@@ -5,7 +5,8 @@
 **功能**：在一张图片上覆盖另一张图片
 
 **场景**：批量处理实验素材——给个人资料页换头像 👉🏻❤️
-![](https://user-images.githubusercontent.com/11988080/128552218-8f790042-009b-4a43-a0bd-6952dffb6618.png)
+
+<img width="200" alt="example" src="https://user-images.githubusercontent.com/11988080/128552218-8f790042-009b-4a43-a0bd-6952dffb6618.png">
 
 **所需环境**：[JRE8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 
@@ -26,7 +27,7 @@ cd /tmp
 java -cp app.jar "com.haoyizebo.OverlayImage" --help
 ```
 
-输出如下
+可看到使用文档
 
 ```
 Usage: <main class> [options]
@@ -43,10 +44,10 @@ Usage: <main class> [options]
       贴图的尺寸，格式：width,height（默认为原始尺寸）
     --scale
       图像缩放算法，取值（默认为 16）：
-        1	DEFAULT			默认缩放算法
-        2	FAST			速度优先算法
-        4	SMOOTH			平滑优先算法
-        8	REPLICATE		像素复制型缩放算法
+        1	DEFAULT		默认缩放算法
+        2	FAST		速度优先算法
+        4	SMOOTH		平滑优先算法
+        8	REPLICATE	像素复制型缩放算法
         16	AREA_AVERAGING	区域均值算法
       Default: 16
     --help
@@ -74,5 +75,20 @@ java -cp app.jar "com.haoyizebo.OverlayImage" \
 
 运行完毕后，即可在指定的 *out* 目录下看到处理好的图片
 
-图像缩放算法对比：
+**图像缩放算法对比**：
+
 测试图像原始尺寸为 100\*100px，缩放为 90\*90px，使用 「4 SMOOTH 平滑优先算法」或「16 AREA_AVERAGING 区域均值算法」效果较好
+
+
+| DEFAULT    | FAST    | SMOOTH    |
+| ---- | ---- | ---- |
+|  <img width="200" alt="DEFAULT" src="https://user-images.githubusercontent.com/11988080/128625443-dfdda96d-626b-4c75-98b4-24b8046313e9.png">  | <img width="200" alt="FAST" src="https://user-images.githubusercontent.com/11988080/128625453-4070d8c2-08af-4967-ba73-9fca4250c052.png">    | <img width="200" alt="SMOOTH" src="https://user-images.githubusercontent.com/11988080/128625459-5b59f3e7-bb03-4b5a-bc94-4909d62f8e7a.png">    |
+
+| REPLICATE    | AREA_AVERAGING    | 
+| ---- | ---- |
+| <img width="200" alt="REPLICATE" src="https://user-images.githubusercontent.com/11988080/128625465-54f5c832-72ac-4402-a692-d25b688d3149.png">    | <img width="200" alt="AREA_AVERAGING" src="https://user-images.githubusercontent.com/11988080/128625471-60aa9b39-857a-44c8-baae-ed6a1ffab6d1.png">   | 
+
+
+
+
+
