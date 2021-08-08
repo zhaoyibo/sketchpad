@@ -34,6 +34,14 @@ public class OverlayImage {
         @Parameter(names = {"-s", "--size"}, description = "贴图的尺寸，格式：width,height（默认为原始尺寸）", order = 5)
         public String size;
 
+        @Parameter(names = {"--scale"}, description = "图像缩放算法，取值（默认为 16）：\n" +
+                "        1\tDEFAULT\t\t\t默认缩放算法\n" +
+                "        2\tFAST\t\t\t速度优先算法\n" +
+                "        4\tSMOOTH\t\t\t平滑优先算法\n" +
+                "        8\tREPLICATE\t\t像素复制型缩放算法\n" +
+                "        16\tAREA_AVERAGING\t\t区域均值算法", order = 6)
+        public int scale = 16;
+
         @Parameter(names = "--help", help = true, order = 6)
         private boolean help;
 
@@ -116,7 +124,7 @@ public class OverlayImage {
                                     // 在背景图上覆盖贴图
                                     SketchpadUtils.ImagePosition imagePosition = SketchpadUtils.createImagePosition(finalX, finalY, pic)
                                             .withResetHeightAndWidth(finalWidth > 0 ? finalWidth : pic.getWidth(), finalHeight > 0 ? finalHeight : pic.getHeight());
-                                    SketchpadUtils.drawImage(background.createGraphics(), imagePosition);
+                                    SketchpadUtils.drawImage(background.createGraphics(), imagePosition, overlayImageArgs.getScale());
 
                                     // 计算存储路径
                                     String backgroundImageName = FileUtils.trimExtension(backgroundPath.getFileName().toString());
@@ -144,6 +152,7 @@ public class OverlayImage {
         if (isNotBlank(errMsg)) {
             System.err.println("ERROR: " + errMsg);
         }
+        jCommander.setColumnSize(1000);
         jCommander.usage();
     }
 

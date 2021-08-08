@@ -218,11 +218,28 @@ public class SketchpadUtils {
      */
     @SuppressWarnings("all")
     public static void drawImage(Graphics2D graphics2D, ImagePosition image) {
+        drawImage(graphics2D, image, Image.SCALE_AREA_AVERAGING);
+    }
+
+    /**
+     * 绘制一个图片
+     *
+     * @param graphics2D            画板
+     * @param image                 图片
+     * @param imageScalingAlgorithm 图像缩放算法
+     * @see java.awt.Image#SCALE_DEFAULT
+     * @see java.awt.Image#SCALE_FAST
+     * @see java.awt.Image#SCALE_SMOOTH
+     * @see java.awt.Image#SCALE_REPLICATE
+     * @see java.awt.Image#SCALE_AREA_AVERAGING
+     */
+    @SuppressWarnings("all")
+    public static void drawImage(Graphics2D graphics2D, ImagePosition image, int imageScalingAlgorithm) {
         BufferedImage bufferedImage = image.getBufferedImage();
         if (Objects.isNull(image.getWidth()) || Objects.isNull(image.getHeight())) {
             image.withDefaultHeightAndWidth();
         }
-        Image scaledInstance = bufferedImage.getScaledInstance(image.getWidth(), image.getHeight(), Image.SCALE_DEFAULT);
+        Image scaledInstance = bufferedImage.getScaledInstance(image.getWidth(), image.getHeight(), imageScalingAlgorithm);
         graphics2D.drawImage(scaledInstance, image.getX(), image.getY(), null);
     }
 

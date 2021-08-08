@@ -41,6 +41,14 @@ Usage: <main class> [options]
       贴图起始的坐标，格式：x,y（默认为 0,0）
     -s, --size
       贴图的尺寸，格式：width,height（默认为原始尺寸）
+    --scale
+      图像缩放算法，取值（默认为 16）：
+        1	DEFAULT			默认缩放算法
+        2	FAST			速度优先算法
+        4	SMOOTH			平滑优先算法
+        8	REPLICATE		像素复制型缩放算法
+        16	AREA_AVERAGING	区域均值算法
+      Default: 16
     --help
 ```
 
@@ -65,3 +73,6 @@ java -cp app.jar "com.haoyizebo.OverlayImage" \
 ```
 
 运行完毕后，即可在指定的 *out* 目录下看到处理好的图片
+
+图像缩放算法对比：
+测试图像原始尺寸为 100\*100px，缩放为 90\*90px，使用 「4 SMOOTH 平滑优先算法」或「16 AREA_AVERAGING 区域均值算法」效果较好
